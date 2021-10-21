@@ -1,0 +1,195 @@
+#include <stdio.h>
+#include <conio.c>
+#include <stdlib.h>
+#include <time.h>
+#include <conio.h>
+#include <string.h>
+
+	int soma (int a,int b);
+int subtracao (int a,int b);
+ float divisao  (int a,int b);
+float multiplicacao (int a,int b);
+
+
+void box ( int x , int xx , int y , int yy ){
+int xs=xx-x ,ys=yy-y,m,n, i=1 , j=1;
+	for(n=x;n<xx;n++){
+		for (m=y; m<yy; m++){
+			gotoxy(n,m);
+			textbackground(1);
+			printf("  ");
+		}
+	}
+	 for ( i=1; i<xs; i++){
+	 	textcolor(14);
+ 		gotoxy(x+i,y);
+ 		printf("%c",205);
+ 		gotoxy(x+i,yy);
+ 		printf("%c",205);
+	 }
+  for ( j=1; j<ys; j++){
+ 		gotoxy(x,y+j);
+ 		printf("%c",186);
+	 }
+ for ( j=1; j<ys; j++){
+ 		gotoxy(xx,y+j);
+ 		printf("%c",186);
+	 }
+	 gotoxy(x,y);
+	 printf("%c",201);
+ 		gotoxy(x,yy);
+ 		printf("%c",200);
+ 		gotoxy(xx,y);
+ 		printf("%c",187);
+ 		gotoxy(xx,yy);
+ 		printf("%c",188);
+ 	}
+main(){
+	box(20,60,1,25);
+	box(23,57,3,6);
+	gotoxy(29,2);
+	printf("CALCULADORA");
+	box(23,29,7,9);
+	gotoxy(26,8);
+	printf("CE");
+	box(23,29,11,13);
+	gotoxy(26,12);
+	printf("7");
+	box(23,29,15,17);
+	gotoxy(26,16);
+	printf("4");
+	box(23,29,19,21);
+	gotoxy(26,20);
+	printf("1");
+	box(31,37,7,9);
+	gotoxy(34,8);
+	printf("c");
+	box(31,37,11,13);
+	gotoxy(34,12);
+	printf("8");
+	box(31,37,15,17);
+	gotoxy(34,16);
+	printf("5");
+	box(31,37,19,21);
+	gotoxy(34,20);
+	printf("2");
+		box(39,45,7,9);
+	gotoxy(42,8);
+	printf("<-");
+		box(39,45,11,13);
+	gotoxy(42,12);
+	printf("9");
+		box(39,45,15,17);
+	gotoxy(42,16);
+	printf("6");
+		box(39,45,19,21);
+	gotoxy(42,20);
+	printf("3");
+	box(47,57,7,9);
+	gotoxy(52,8);
+	printf("=");
+		box(47,57,11,13);
+	gotoxy(52,12);
+	printf("X");
+		box(47,57,15,17);
+	gotoxy(52,16);
+	printf("/");
+		box(47,57,19,21);
+	gotoxy(52,20);
+	printf("-");
+	box(23,29,22,24);
+	gotoxy(25,23);
+	printf("+/-");
+	box(31,37,22,24);
+	gotoxy(34,23);
+	printf("0");
+		box(39,45,22,24);
+	gotoxy(42,23);
+	printf(",");
+	box(47,57,22,24);
+	gotoxy(52,23);
+	printf("+");
+	
+
+	
+	int m,i , n;
+	int  retorno;
+	char op;
+	int calcula,multiplica,diminui;
+	float  divide;
+for (;;){
+		i++;
+		gotoxy(24,4);
+		getch();
+		printf("                   ");
+		gotoxy(25,5);
+		scanf("%d",&m);
+		gotoxy(40,5);
+		op=getche();
+		printf("   ");
+		scanf("%d",&n);
+		gotoxy(25,5);
+		printf("                        ");
+		if(op=='+'){
+				gotoxy(24,4);
+			retorno=soma(m,n);
+			printf("resultado = %d\n", retorno);
+		}
+		if(op=='-'){
+				gotoxy(24,4);
+			retorno=subtracao(m,n);
+			printf("resultado = %d\n", retorno);
+		}
+		if(op=='/'){
+			gotoxy(24,4);
+			retorno=divisao(m,n);
+			printf("resultado = %d\n", retorno);
+		}
+		if (op=='*'){
+			gotoxy(24,4);
+			retorno=multiplicacao(m,n);
+			printf("resultado = %d\n", retorno);
+		}
+
+}
+	}
+int soma (int a,int b){
+	int calculo=a+b;
+	return calculo ;
+}
+ int subtracao (int a,int b){
+	int calculo=a-b;
+	return calculo ;
+}
+ float divisao (int a,int b){
+float calculo=a/b;
+	return calculo ;
+}
+float multiplicacao (int a,int b){
+float calculo=a*b;
+	return calculo ;
+}
+ 
+	
+	
+	
+	
+	
+	
+	
+ 
+  		
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
